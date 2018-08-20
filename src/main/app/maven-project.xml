@@ -32,6 +32,7 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
         <json:object-to-json-transformer doc:name="Object to JSON"/>
         <jms:outbound-endpoint queue="flights" connector-ref="Active_MQ" doc:name="JMS:flights"/>
     </flow>
+    
     <flow name="dummyFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/dummy" doc:name="HTTP"/>
         <set-payload value="#['Dummy - force git update']" doc:name="Set Payload"/>
